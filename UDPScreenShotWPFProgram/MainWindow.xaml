@@ -1,0 +1,19 @@
+﻿<Window x:Class="UDPScreenShotWPFProgram.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UDPScreenShotWPFProgram"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.18*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" />
+
+        <Button Grid.Row="1" Width="200" Height="50" Background="Tomato" Foreground="White" FontSize="20" FontWeight="Black" Click="StartButton" >Start</Button>
+
+    </Grid>
+</Window>
