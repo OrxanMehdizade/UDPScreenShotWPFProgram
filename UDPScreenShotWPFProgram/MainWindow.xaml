@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
         <Image Grid.Row="0" Name="imageControl" Stretch="Uniform" />
         <UniformGrid Grid.Row="1" Columns="2">
-            <Button  Width="200" Height="50"   FontSize="20" FontWeight="Black" Click="StartButton" >Screenshot</Button>
+            <Button Width="200" Height="50" FontSize="20" FontWeight="Black" Click="Screenshotclcik" Content="Screenshot" ></Button>
             <Button  Width="200" Height="50"   FontSize="20" FontWeight="Black" Click="SaveButton" >SaveImage</Button>
             
         </UniformGrid>
