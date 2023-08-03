@@ -6,16 +6,11 @@ using System.Net;
 using System.Text;
 
 
-var server = new Socket(
-    AddressFamily.InterNetwork,
-    SocketType.Dgram,
-    ProtocolType.Udp
-    );
-
+var server = new Socket(AddressFamily.InterNetwork,SocketType.Dgram,ProtocolType.Udp);
 IPAddress.TryParse("127.0.0.1", out var ip);
-var listenerEP = new IPEndPoint(ip, 27001);
+var serverEP = new IPEndPoint(ip, 27001);
 
-server.Bind(listenerEP);
+server.Bind(serverEP);
 
 var encryptedMessage = new byte[ushort.MaxValue];
 
@@ -79,7 +74,7 @@ byte[] CaptureScreenShot()
     catch (Exception ex)
     {
         Console.WriteLine(ex.Message);
-        var bytes = Encoding.Default.GetBytes("Error capturing the screenshot: " + ex.Message);
+        var bytes = Encoding.Default.GetBytes("Error" + ex.Message);
         return bytes;
     }
 }
